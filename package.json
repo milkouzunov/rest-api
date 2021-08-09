@@ -4,7 +4,7 @@
   "description": "Resume REST-API",
   "web": "index.js",
   "scripts": {
-    "build": "mkdir dist && rd dist && webpack --mode production --config ./webpack.index.config.js && webpack --mode production --config ./webpack.config.js",
+    "build": "webpack --mode production --config ./webpack.index.config.js && webpack --mode production --config ./webpack.config.js",
     "start": "node ./dist/index.js",
     "dev": "nodemon index.js"
   },
