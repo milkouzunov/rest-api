@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -25,7 +25,7 @@ jobs:
         cache: 'npm'
     - run: npm install
       continue-on-error: true
-    - run: npm run build
+    - run: npm run build --if-present
       continue-on-error: true
     - uses: akhileshns/heroku-deploy@v3.12.12 
       continue-on-error: true
