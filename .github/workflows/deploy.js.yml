@@ -27,6 +27,16 @@ jobs:
       continue-on-error: true
     - run: npm run build --if-present
       continue-on-error: true
+    - uses: extractions/netrc@v1
+      with:
+        machine: api.heroku.com
+        username: "milko.uzunov69@gmail.com"
+        password: "bd89dae7-8be7-4249-aeac-cb21ed092cd4"
+    - uses: extractions/netrc@v1
+      with:
+        machine:  git.heroku.com
+        username: "milko.uzunov69@gmail.com"
+        password: "bd89dae7-8be7-4249-aeac-cb21ed092cd4"
     - uses: AkhileshNS/heroku-deploy@v3.12.12
       with:
         heroku_api_key: "bd89dae7-8be7-4249-aeac-cb21ed092cd4"
