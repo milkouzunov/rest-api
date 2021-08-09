@@ -7,10 +7,8 @@ const errorHandler = require('./middlewares/errorHandler');
 
 require('dotenv').config();
 
-const app = express(),
-            DIST_DIR = __dirname;
+const app = express();
 
-app.use(express.static(DIST_DIR))
 require('./config/setupExpress')(app);
 require('./config/setupMongoose')();
 
