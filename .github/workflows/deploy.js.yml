@@ -29,9 +29,9 @@ jobs:
       continue-on-error: true
     - uses: AkhileshNS/heroku-deploy@v3.12.12
       with:
-        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_api_key: "bd89dae7-8be7-4249-aeac-cb21ed092cd4"
         heroku_app_name: "rest-api-resume"
-        heroku_email: ${{secrets.HEROKU_EMAIL}}
+        heroku_email: "milko.uzunov69@gmail.com"
         healthcheck: "https://rest-api-resume.herokuapp.com"
         branch: master
         procfile: "web: npm start"
