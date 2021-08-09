@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Check out repository
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - name: Setup Node
@@ -22,10 +22,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: Install dependencies
-      - run: npm install
+        run: npm install
         continue-on-error: true
       - name: Build
-      - run: npm run build --if-present
+        run: npm run build --if-present
         continue-on-error: true
       - name: Heroku login credentials
         run: |
