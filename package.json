@@ -2,9 +2,9 @@
   "name": "rest-api",
   "version": "1.0.0",
   "description": "Resume REST-API",
-  "web": "index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./dist/index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "author": "",
