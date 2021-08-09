@@ -29,7 +29,7 @@ jobs:
         continue-on-error: true
       - name: Heroku login credentials
         run: |
-          cat > ~/.netrc << EOF
+          cat > ~/.netrc <<EOF
             machine api.heroku.com
               login milko.uzunov69@gmail.com
               password bd89dae7-8be7-4249-aeac-cb21ed092cd4
