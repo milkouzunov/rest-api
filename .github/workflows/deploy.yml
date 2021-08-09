@@ -23,19 +23,15 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-        continue-on-error: true
-      - name: Build
-        run: npm run build --if-present
-        continue-on-error: true
       - name: Heroku login credentials
         run: |
           cat > ~/.netrc <<EOF
             machine api.heroku.com
-              login milko.uzunov69@gmail.com
-              password bd89dae7-8be7-4249-aeac-cb21ed092cd4
+              login ${{secrets.HEROKU_EMAIL}}
+              password ${{secrets.HEROKU_API_KEY}}
             machine git.heroku.com
-              login milko.uzunov69@gmail.com
-              password bd89dae7-8be7-4249-aeac-cb21ed092cd4
+              login ${{secrets.HEROKU_EMAIL}}
+              password ${{secrets.HEROKU_API_KEY}}
           EOF
       - name: Add Heroku remote
         run: heroku git:remote --app ${{ secrets.HEROKU_APP_NAME }}
